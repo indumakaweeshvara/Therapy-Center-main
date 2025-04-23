@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="632.0" style="-fx-background-color: #9FB1C9;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.TherapistController">
+    <children>
+        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="42.0" prefWidth="604.0" style="-fx-background-color: #1e467b; -fx-background-radius: 10;" text="MANAGE THERAPIST" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="14.0" layoutY="72.0" text="Therapist Name:" textFill="#1e467b" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="72.0">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="therapistNameField" focusTraversable="false" layoutX="120.0" layoutY="66.0" prefHeight="30.0" prefWidth="175.0" promptText="Enter name" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="66.0" />
+
+        <Label layoutX="14.0" layoutY="112.0" text="Email:" textFill="#1e467b" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="112.0">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="emailField" focusTraversable="false" layoutX="120.0" layoutY="106.0" prefHeight="30.0" prefWidth="175.0" promptText="Enter email" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="106.0" />
+
+        <!-- Form Fields - Second Column -->
+        <Label layoutX="325.0" layoutY="70.0" text="Phone:" textFill="#1e467b" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="70.0">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="phoneField" focusTraversable="false" layoutX="420.0" layoutY="66.0" prefHeight="30.0" prefWidth="198.0" promptText="Enter phone number" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="66.0" />
+
+        <Label layoutX="325.0" layoutY="110.0" text="Specialization:" textFill="#1e467b" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="110.0">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="specializationField" focusTraversable="false" layoutX="420.0" layoutY="106.0" prefHeight="30.0" prefWidth="198.0" promptText="Enter specialization" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="106.0" />
+
+        <!-- CRUD Buttons -->
+        <HBox alignment="CENTER" layoutX="14.0" layoutY="196.0" prefHeight="42.0" prefWidth="604.0" spacing="20.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="196.0">
+            <children>
+                <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveBtnAction" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #4b89dc; -fx-background-radius: 5;" text="Save" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateBtnAction" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #4b89dc; -fx-background-radius: 5;" text="Update" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteBtnAction" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #4b89dc; -fx-background-radius: 5;" text="Delete" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetBtnAction" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #4b89dc; -fx-background-radius: 5;" text="Reset" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+
+        <!-- Table View -->
+        <TableView fx:id="therapistTable" layoutX="14.0" layoutY="253.0" onMouseClicked="#onClickedAction" prefHeight="199.0" prefWidth="604.0" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="253.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="140.0" text="Name" />
+                <TableColumn fx:id="emailColumn" prefWidth="140.0" text="Email" />
+                <TableColumn fx:id="phoneColumn" prefWidth="120.0" text="Phone" />
+                <TableColumn fx:id="specializationColumn" prefWidth="128.0" text="Specialization" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </children>
+</AnchorPane>

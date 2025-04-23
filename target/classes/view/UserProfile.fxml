@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ContentAnchor" prefHeight="466" prefWidth="632" style="-fx-background-color: #9FB1C9;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.UserProfileController">
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="30">
+
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="User Profile" textFill="#1e467b">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <GridPane alignment="CENTER" hgap="15" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="150" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="350" />
+            </columnConstraints>
+
+            <Label text="Username:" textFill="#1e467b" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+            <TextField fx:id="usernameField" editable="false" style="-fx-background-color: white;                               -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="Full Name:" textFill="#1e467b" GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+            <TextField fx:id="fullNameField" editable="false" style="-fx-background-color: white;                               -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Email:" textFill="#1e467b" GridPane.columnIndex="0" GridPane.rowIndex="2">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+            <TextField fx:id="emailField" editable="false" style="-fx-background-color: white;                               -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Role:" textFill="#1e467b" GridPane.columnIndex="0" GridPane.rowIndex="3">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+            <TextField fx:id="roleField" editable="false" style="-fx-background-color: white;                               -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <HBox alignment="CENTER_RIGHT" spacing="20">
+
+            <Button fx:id="contactAdminBtn" onAction="#adminBtnAction" style="-fx-background-color: #4b89dc;                            -fx-text-fill: white;                            -fx-background-radius: 5;" text="Contact Admin" />
+            <Button fx:id="editProfileBtn" onAction="#editProfileAction" style="-fx-background-color: #4b89dc;                            -fx-text-fill: white;                            -fx-background-radius: 5;" text="Edit Profile" />
+
+            <Button fx:id="addReceptionistBtn" onAction="#addReceptionistAction" style="-fx-background-color: #4b89dc;                            -fx-text-fill: white;                            -fx-background-radius: 5;                            -fx-visible: false;" text="Add Receptionist" />
+        </HBox>
+    </VBox>
+</AnchorPane>

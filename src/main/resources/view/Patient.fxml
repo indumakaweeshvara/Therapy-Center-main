@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="632.0" style="-fx-background-color: #9FB1C9;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PatientController">
+    <children>
+        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="42.0" prefWidth="604.0" style="-fx-background-color: #1e467b; -fx-background-radius: 10;" text="MANAGE PATIENTS" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <!-- Form Container - Using VBox for form fields to make them stack nicely -->
+        <VBox layoutX="14.0" layoutY="70.0" prefHeight="200.0" prefWidth="300.0" spacing="8.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="70.0">
+            <children>
+                <!-- First Row - Patient ID and Name -->
+                <HBox spacing="10.0">
+                    <children>
+                        <VBox prefWidth="150.0">
+                            <children>
+                                <Label text="Patient ID:" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtPatientId" editable="false" focusTraversable="false" prefHeight="30.0" promptText="Auto-generated" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="150.0">
+                            <children>
+                                <Label text="Name:" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtName" focusTraversable="false" prefHeight="30.0" promptText="Enter patient name" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="150.0">
+                            <children>
+                                <Label text="Gender:" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <ComboBox fx:id="cmbGender" focusTraversable="false" prefHeight="30.0" prefWidth="150.0" promptText="Select Gender" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="150.0">
+                            <children>
+                                <Label text="Age:" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtAge" focusTraversable="false" prefHeight="30.0" promptText="Enter age" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <!-- Second Row - Address, Contact Info -->
+                <HBox spacing="10.0">
+                    <children>
+                        <VBox prefWidth="250.0">
+                            <children>
+                                <Label text="Address:" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtAddress" focusTraversable="false" prefHeight="30.0" promptText="Enter address" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="150.0">
+                            <children>
+                                <Label text="Phone:" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtPhone" focusTraversable="false" prefHeight="30.0" promptText="Enter phone number" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="200.0">
+                            <children>
+                                <Label text="Email:" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtEmail" focusTraversable="false" prefHeight="30.0" promptText="Enter email address" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <!-- Third Row - Therapy Program & Session Info -->
+                <HBox spacing="10.0">
+                    <children>
+                        <VBox prefWidth="250.0">
+                            <children>
+                                <Label text="Therapy Program:" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <ComboBox fx:id="cmbProgram" focusTraversable="false" onAction="#cmbProgramAction" prefHeight="30.0" prefWidth="250.0" promptText="Select Therapy Program" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="100.0">
+                            <children>
+                                <Label text="Sessions:" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtSessions" focusTraversable="false" prefHeight="30.0" promptText="Count" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="150.0">
+                            <children>
+                                <Label text="Payment Type:" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <ComboBox fx:id="cmbPaymentType" focusTraversable="false" prefHeight="30.0" prefWidth="150.0" promptText="Select Payment" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <!-- Fourth Row - Payment details -->
+                <HBox spacing="10.0">
+                    <children>
+                        <VBox prefWidth="150.0">
+                            <children>
+                                <Label text="Amount (LKR):" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtAmount" focusTraversable="false" onInputMethodTextChanged="#amountTextChangeAction" prefHeight="30.0" promptText="Enter amount" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                        <VBox prefWidth="150.0">
+                            <children>
+                                <Label text="Balance (LKR):" textFill="#1e467b">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtBalance" editable="false" focusTraversable="false" prefHeight="30.0" promptText="Enter balance" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <!-- CRUD Buttons -->
+        <HBox alignment="CENTER" layoutX="15.2" layoutY="288.8" prefHeight="28.0" prefWidth="603.0" spacing="20.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="289.0">
+            <children>
+                <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #4b89dc; -fx-background-radius: 5;" text="Save" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #4b89dc; -fx-background-radius: 5;" text="Update" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #4b89dc; -fx-background-radius: 5;" text="Delete" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: #4b89dc; -fx-background-radius: 5;" text="Clear" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+
+        <!-- Patient Table -->
+        <TableView fx:id="tblPatients" layoutX="14.0" layoutY="323.0" onMouseClicked="#tblPatientsOnMouseClicked" prefHeight="129.0" prefWidth="604.0" style="-fx-background-radius: 5; -fx-border-color: #1e467b; -fx-border-radius: 5;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="323.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="120.0" text="Name" />
+                <TableColumn fx:id="colGender" prefWidth="70.0" text="Gender" />
+                <TableColumn fx:id="colAge" prefWidth="50.0" text="Age" />
+                <TableColumn fx:id="colPhone" prefWidth="100.0" text="Phone" />
+                <TableColumn fx:id="colEmail" prefWidth="125.0" text="Email" />
+                <TableColumn fx:id="colSessions" prefWidth="85.0" text="Sessions" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </children>
+</AnchorPane>

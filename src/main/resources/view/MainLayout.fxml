@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="DashBoardAnc" minHeight="500.0" minWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.MainLayoutController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="800.0" style="-fx-background-color: #4b89dc;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="AccountBtn" mnemonicParsing="false" onAction="#AccountBtnAction" style="-fx-background-color: #4b89dc;" text="Account" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="19.0">
+                     <image>
+                        <Image url="@../../../../../../../../../DOWNLOADS/icons8-test-account-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label text="/" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="LogoutBtn" mnemonicParsing="false" onAction="#LogoutBtnAction" style="-fx-background-color: #4b89dc;" text="Logout" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@../../../../../../../../../DOWNLOADS/icons8-logout-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutY="-2.0" prefHeight="500.0" prefWidth="170.0" spacing="30.0" style="-fx-background-color: #333333;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label maxWidth="1.7976931348623157E308" prefHeight="35.0" style="-fx-background-color: #4b89dc;" text="Serenity Mental Health" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.5" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <VBox maxHeight="300.0" spacing="5.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="therapistBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#therapistBtnAction" style="-fx-background-color: #333333;" text="Therapist" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="programsBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#programsBtnAction" style="-fx-background-color: #333333;" text="Programs" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="patientsBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#patientsBtnAction" style="-fx-background-color: #333333;" text="Patients" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="therapyDetailsBtn" layoutX="10.0" layoutY="98.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#therapyDetailsBtnAction" style="-fx-background-color: #333333;" text="Therapy Details" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="appoinmentsBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#appoinmentsBtnAction" style="-fx-background-color: #333333;" text="Therapy-Sessions" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="paymentBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#paymentBtnAction" style="-fx-background-color: #333333;" text="Payments" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="reportBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#reoprtBtnAction" style="-fx-background-color: #333333;" text="Reports" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="settingsBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#settingsBtnAction" style="-fx-background-color: #333333;" text="Settings" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="ContentAnchor" layoutX="170.4" layoutY="35.2" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0" />
+   </children>
+</AnchorPane>

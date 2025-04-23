@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancLogin" prefHeight="500.0" prefWidth="800.0" style="bac: ;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoginController">
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: #9FB1C9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+            <children>
+                <HBox alignment="CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="479.0" prefWidth="334.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" prefHeight="356.0" prefWidth="334.0" spacing="10.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15deg;">
+                                    <children>
+                                        <HBox alignment="TOP_CENTER" prefHeight="33.0" prefWidth="334.0">
+                                            <children>
+                                                <Label alignment="TOP_CENTER" prefHeight="46.0" prefWidth="349.0" style="-fx-background-color: #4b89dc; -fx-background-radius: 10deg;" text="Serenity Mental Health" textAlignment="CENTER" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="16.0" />
+                                                    </font>
+                                                    <padding>
+                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <VBox prefHeight="270.0" prefWidth="334.0">
+                                            <VBox.margin>
+                                                <Insets bottom="30.0" top="30.0" />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                            </padding>
+                                            <children>
+                                                <Label text="Username">
+                                                    <font>
+                                                        <Font name="System Bold" size="13.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="usernameTextField" focusTraversable="false" prefHeight="32.0" prefWidth="314.0" promptText="Username">
+                                                    <VBox.margin>
+                                                        <Insets top="5.0" />
+                                                    </VBox.margin>
+                                                </TextField>
+                                                <Label text="Password">
+                                                    <font>
+                                                        <Font name="System Bold" size="13.0" />
+                                                    </font>
+                                                    <VBox.margin>
+                                                        <Insets top="25.0" />
+                                                    </VBox.margin>
+                                                </Label>
+                                                <HBox fx:id="passwordHBox" alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="314.0" style="-fx-border-color: #bababa; -fx-border-radius: 5;">
+                                                    <children>
+                                                        <TextField fx:id="showPasswordTextField" managed="false" prefHeight="32.0" prefWidth="280.0" promptText="*******" visible="false" />
+                                                        <PasswordField fx:id="passwordField" focusTraversable="false" prefHeight="32.0" prefWidth="280.0" promptText="*******" style="-fx-background-color: white;" />
+                                                        <Button fx:id="passwordVisibilityButton" focusTraversable="false" onAction="#togglePasswordVisibility" style="-fx-background-color: transparent;">
+                                             <graphic>
+                                                <ImageView fx:id="passwordVisibilityIcon" fitHeight="20.0" fitWidth="20.0">
+                                                   <image>
+                                                      <Image url="@../../../../../../../../../DOWNLOADS/icons8-visibility-30.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <Button fx:id="loginButton" mnemonicParsing="false" onAction="#LoginAction" prefHeight="36.0" prefWidth="314.0" style="-fx-background-color: #4b89dc;" text="Login" textFill="WHITE">
+                                                    <VBox.margin>
+                                                        <Insets top="70.0" />
+                                                    </VBox.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
